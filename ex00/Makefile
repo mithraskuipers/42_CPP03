@@ -17,11 +17,11 @@ OBJ_DIR		=	objs/
 HDR_DIR		=	includes/
 
 # FILES
-SRC_FILES	=	main.cpp Fixed.cpp
+SRC_FILES	=	main.cpp ClapTrap.cpp
 				
 OBJ_FILES	=	$(SRC_FILES:.cpp=.o)
 
-HDR_FILES	=	Fixed.hpp
+HDR_FILES	=	ClapTrap.hpp
 
 SRC			=	$(addprefix $(SRC_DIR), $(SRC_FILES))
 OBJ			=	$(addprefix $(OBJ_DIR), $(OBJ_FILES))

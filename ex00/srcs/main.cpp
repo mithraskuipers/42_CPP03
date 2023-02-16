@@ -6,7 +6,7 @@
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/01/30 08:18:20 by mikuiper      #+#    #+#                 */
-/*   Updated: 2023/01/30 08:18:39 by mikuiper      ########   odam.nl         */
+/*   Updated: 2023/02/16 14:12:26 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,15 @@
 //	- assignment operator: used to assign one value to another.
 //	- destructor: invoked when an object is deleted.
 
-#include "./../includes/Fixed.hpp"
+#include "./../includes/ClapTrap.hpp"
 
 int main(void)
 {
-	Fixed a; 	// This calls the constructor
-	Fixed b(a);	// This calls the copy constructor, copy assignment operator, and getRawBits().
-	Fixed c; 	// This calls the constructor
+	ClapTrap a("Mithras"); 	// This calls the constructor
+	ClapTrap b;
+	//ClapTrap b(a);	// This calls the copy constructor, copy assignment operator, and getRawBits().
+	//ClapTrap c; 	// This calls the constructor
 
-	c = b;		// This calls the copy assignment operator and getRawBits method
-	std::cout << a.getRawBits() << std::endl;
-	std::cout << b.getRawBits() << std::endl;
-	std::cout << c.getRawBits() << std::endl;
+	//c = b;		// This calls the copy assignment operator and getRawBits method
 	return 0;
 }

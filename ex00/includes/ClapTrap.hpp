@@ -1,31 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   Fixed.hpp                                          :+:    :+:            */
+/*   ClapTrap.hpp                                          :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/01/30 08:18:10 by mikuiper      #+#    #+#                 */
-/*   Updated: 2023/01/30 08:18:11 by mikuiper      ########   odam.nl         */
+/*   Updated: 2023/02/16 11:07:03 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-# define FIXED_HPP
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
 
 #include <iostream>
 
-class	Fixed {
+class	ClapTrap
+{
 	public:
-		Fixed(void);								// Constructor
-		Fixed(Fixed const &Source);					// Copy constructor
-		~Fixed(void);								// Destructor
-		Fixed	&operator=(Fixed const &Number);	// Implicitly-declared copy assignment operator
-		int		getRawBits(void) const;				// Getter method
-		void	setRawBits(int const raw);			// Setter method
+		ClapTrap(void);								// Constructor
+		ClapTrap(std::string Name);					// Constructor
+		ClapTrap(ClapTrap const &Source);			// Copy constructor
+		ClapTrap	&operator=(ClapTrap const &Source);
+		~ClapTrap(void);							// Destructor
+		void	attack(const std::string &target);
+		void	takeDamage(unsigned int amount);
+		void	beRepaired(unsigned int amount);
 	private:
-		int					_fixedValue;
-		static int const	_fractionalBits;
+		std::string	_Name;
+		int			_hitPoints;
+		int			_energyPoints;
+		int			_attackDamage;
 };
 
 #endif
