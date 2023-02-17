@@ -6,7 +6,7 @@
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/01/30 08:18:20 by mikuiper      #+#    #+#                 */
-/*   Updated: 2023/02/16 14:12:26 by mikuiper      ########   odam.nl         */
+/*   Updated: 2023/02/17 15:13:43 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@
 int main(void)
 {
 	ClapTrap a("Mithras"); 	// This calls the constructor
-	ClapTrap b;
+	ClapTrap b("Bas");
+	ClapTrap c(b);
 	//ClapTrap b(a);	// This calls the copy constructor, copy assignment operator, and getRawBits().
 	//ClapTrap c; 	// This calls the constructor
 

@@ -22,10 +22,10 @@ ClapTrap::ClapTrap(void)
 	return ;
 }
 
-// Constructor
+// Overloaded
 ClapTrap::ClapTrap(std::string Name)
 {
-	std::cout << "Default constructor called for " << Name << std::endl;
+	std::cout << "Overloaded constructor called for " << Name << std::endl;
 	_Name = Name;
 	_hitPoints = 10;
 	_energyPoints = 10;
@@ -36,7 +36,10 @@ ClapTrap::ClapTrap(std::string Name)
 // Copy constructor
 ClapTrap::ClapTrap(const ClapTrap &Source)
 {
-	std::cout << "Copy constructor called on " << Source._Name << " for " << _Name << std::endl;
+	if (Source._Name.empty())
+		std::cout << "Copy constructor called. Copying " << Source._Name << ".." << std::endl;
+	else
+		std::cout << "Copy constructor called. Coping " << Source._Name << " into " << _Name << ".." << std::endl;
 	*this = Source;
 }
 
