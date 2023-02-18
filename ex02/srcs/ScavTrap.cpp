@@ -6,7 +6,7 @@
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/17 20:22:07 by mikuiper      #+#    #+#                 */
-/*   Updated: 2023/02/18 11:52:27 by mikuiper      ########   odam.nl         */
+/*   Updated: 2023/02/18 15:08:11 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ ScavTrap::ScavTrap(std::string Name) : ClapTrap()
 	_hitPoints = 100;
 	_energyPoints = 50;
 	_attackDamage = 20;
-	std::cout << "[ScavTrap] ScavTrap unnamed has " << _hitPoints << " hit points, " << _energyPoints << " energy points, and " << _attackDamage << " attack damage" << std::endl;
+	std::cout << "[ScavTrap] ScavTrap " << _Name << " has " << _hitPoints << " hit points, " << _energyPoints << " energy points, and " << _attackDamage << " attack damage" << std::endl;
 	return ;
 }
 
@@ -49,11 +49,13 @@ ScavTrap::ScavTrap(const ScavTrap &Source) : ClapTrap(Source)
 
 // Operator overloading via 'assignation operator'
 // Here we change the meaning (= overloading) of the equals/assignation sign (= operator)
-
 ScavTrap	&ScavTrap::operator=(const ScavTrap &Source)
 {
-	ClapTrap::operator=(Source);
-	return (*this);
+	_attackDamage = Source._attackDamage;
+	_energyPoints = Source._energyPoints;
+	_hitPoints = Source._hitPoints;
+	_Name = Source._Name;
+	return *this;
 }
 
 // Destructor
