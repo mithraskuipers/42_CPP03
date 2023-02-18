@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ClapTrap.hpp                                       :+:    :+:            */
+/*   ClapTrap.hpp                                          :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/02/17 20:21:49 by mikuiper      #+#    #+#                 */
-/*   Updated: 2023/02/17 20:21:53 by mikuiper      ########   odam.nl         */
+/*   Created: 2023/01/30 08:18:10 by mikuiper      #+#    #+#                 */
+/*   Updated: 2023/02/16 11:07:03 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class	ClapTrap
 		void	attack(const std::string &target);			// Member function
 		void	takeDamage(unsigned int amount);			// Member function
 		void	beRepaired(unsigned int amount);			// Member function
-	private:
+	protected:
 		std::string	_Name;
 		int			_hitPoints;
 		int			_energyPoints;

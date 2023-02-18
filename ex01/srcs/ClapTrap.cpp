@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ClapTrap.cpp                                       :+:    :+:            */
+/*   ClapTrap.cpp                                          :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/02/17 20:22:00 by mikuiper      #+#    #+#                 */
-/*   Updated: 2023/02/18 11:19:05 by mikuiper      ########   odam.nl         */
+/*   Created: 2023/01/30 08:18:14 by mikuiper      #+#    #+#                 */
+/*   Updated: 2023/02/16 11:07:58 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ ClapTrap::ClapTrap(void)
 // Overloaded constructor
 ClapTrap::ClapTrap(std::string Name)
 {
-	std::cout << "[ClapTrap] Overloading constructor called for " << Name << std::endl;
+	std::cout << "[ClapTrap] Creating " << Name << " ClapTrap via overloading constructor" << std::endl;
 	_Name = Name;
 	_hitPoints = 10;
 	_energyPoints = 10;
@@ -43,14 +43,14 @@ ClapTrap::ClapTrap(const ClapTrap &Source)
 	else
 		std::cout << "[ClapTrap] Copy constructor called. Copying " << Source._Name << " into unnamed ClapTrap.." << std::endl;
 	*this = Source;
+	return ;
 }
 
 // Operator overloading via 'assignation operator'
 // Here we change the meaning (= overloading) of the equals/assignation sign (= operator)
-
 ClapTrap	&ClapTrap::operator=(ClapTrap const &Source)
 {
-	// std::cout << "Copy assignment operator called" << std::endl;
+	std::cout << "[ClapTrap] Copy assignment operator called" << std::endl;
 	this->_Name = Source._Name;
 	return (*this);
 }

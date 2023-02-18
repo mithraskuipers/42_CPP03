@@ -5,8 +5,8 @@
 /*                                                     +:+                    */
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2023/02/17 20:22:17 by mikuiper      #+#    #+#                 */
-/*   Updated: 2023/02/17 20:25:55 by mikuiper      ########   odam.nl         */
+/*   Created: 2023/01/30 08:18:20 by mikuiper      #+#    #+#                 */
+/*   Updated: 2023/02/18 11:53:19 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,13 @@
 //	- destructor: invoked when an object is deleted.
 
 #include "./../includes/ClapTrap.hpp"
+#include "./../includes/ScavTrap.hpp"
 
-int main(void)
+int	main(void)
 {
-	ClapTrap a("Mithras"); 	// This calls the constructor
-	ClapTrap b("Bas");
-	ClapTrap c(b);
-	a.attack("Bas");
-	b.takeDamage(0);
-	a.beRepaired(100);
-	return 0;
+	ClapTrap a("Mithras");
+	ScavTrap b("George");
+	a.attack("George");
+	b.guardGate();
+	return (0);
 }
