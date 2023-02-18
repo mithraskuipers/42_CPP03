@@ -6,7 +6,7 @@
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/18 14:41:47 by mikuiper      #+#    #+#                 */
-/*   Updated: 2023/02/18 15:08:29 by mikuiper      ########   odam.nl         */
+/*   Updated: 2023/02/18 15:30:49 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ FragTrap::FragTrap(std::string Name) : ClapTrap()
 	_hitPoints = 100;
 	_energyPoints = 100;
 	_attackDamage = 30;
-	std::cout << "[FragTrap] FragTrap " << _Name << " has " << _hitPoints << " hit points, " << _energyPoints << " energy points, and " << _attackDamage << " attack damage" << std::endl;
+	std::cout << "[FragTrap] FragTrap " << _Name << " currently has " << _hitPoints << " hit points, " << _energyPoints << " energy points, and " << _attackDamage << " attack damage" << std::endl;
 	return ;
 }
 
@@ -82,7 +82,7 @@ void	FragTrap::attack(const std::string &target)
 	}
 	else if (_energyPoints > 0)
 	{
-		std::cout << "[FragTrap] FragTrap " << _Name << " has " << _energyPoints << " energy point(s)" << std::endl;
+		std::cout << "[FragTrap] FragTrap " << _Name << " currently has " << _energyPoints << " energy point(s)" << std::endl;
 		std::cout << "[FragTrap] FragTrap " << _Name << " attacks " << target << ", causing " << _attackDamage << " points of damage!" << std::endl;
 		this->_energyPoints--;
 		std::cout << "[FragTrap] FragTrap " << _Name << " now has " << _energyPoints << " energy points left" << std::endl;

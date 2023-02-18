@@ -6,7 +6,7 @@
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/01/30 08:18:20 by mikuiper      #+#    #+#                 */
-/*   Updated: 2023/02/18 15:03:46 by mikuiper      ########   odam.nl         */
+/*   Updated: 2023/02/18 15:45:23 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,22 @@
 
 int	main(void)
 {
-	//ClapTrap a("Mithras");
-	//ScavTrap b("George");
-	FragTrap c("George");
-	//a.attack("George");
-	//b.guardGate();
-	c.highFivesGuys();
-	return (0);
+	ClapTrap Mithras("Mithras");
+	ScavTrap George("George");
+	FragTrap Ash("Ash");
+	Mithras.attack("George");
+	George.takeDamage(0);
+	George.guardGate();
+	George.attack("Mithras");
+	Mithras.takeDamage(20);
+	Mithras.beRepaired(999);
+	Ash.attack("George");
+	George.takeDamage(30);
+	Ash.attack("George");
+	George.takeDamage(30);
+	Ash.attack("George");
+	George.takeDamage(30);
+	Ash.attack("George");
+	George.takeDamage(30);
+	George.beRepaired(999);
 }

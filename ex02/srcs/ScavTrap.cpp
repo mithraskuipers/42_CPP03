@@ -6,7 +6,7 @@
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/17 20:22:07 by mikuiper      #+#    #+#                 */
-/*   Updated: 2023/02/18 15:08:11 by mikuiper      ########   odam.nl         */
+/*   Updated: 2023/02/18 15:30:49 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ ScavTrap::ScavTrap(std::string Name) : ClapTrap()
 	_hitPoints = 100;
 	_energyPoints = 50;
 	_attackDamage = 20;
-	std::cout << "[ScavTrap] ScavTrap " << _Name << " has " << _hitPoints << " hit points, " << _energyPoints << " energy points, and " << _attackDamage << " attack damage" << std::endl;
+	std::cout << "[ScavTrap] ScavTrap " << _Name << " currently has " << _hitPoints << " hit points, " << _energyPoints << " energy points, and " << _attackDamage << " attack damage" << std::endl;
 	return ;
 }
 
@@ -82,7 +82,7 @@ void	ScavTrap::attack(const std::string &target)
 	}
 	else if (_energyPoints > 0)
 	{
-		std::cout << "[ScavTrap] ScavTrap " << _Name << " has " << _energyPoints << " energy point(s)" << std::endl;
+		std::cout << "[ScavTrap] ScavTrap " << _Name << " currently has " << _energyPoints << " energy point(s)" << std::endl;
 		std::cout << "[ScavTrap] ScavTrap " << _Name << " attacks " << target << ", causing " << _attackDamage << " points of damage!" << std::endl;
 		this->_energyPoints--;
 		std::cout << "[ScavTrap] ScavTrap " << _Name << " now has " << _energyPoints << " energy points left" << std::endl;

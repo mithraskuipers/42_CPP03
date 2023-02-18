@@ -6,7 +6,7 @@
 /*   By: mikuiper <mikuiper@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/02/17 20:22:17 by mikuiper      #+#    #+#                 */
-/*   Updated: 2023/02/17 20:25:55 by mikuiper      ########   odam.nl         */
+/*   Updated: 2023/02/18 15:33:47 by mikuiper      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,12 @@
 
 int main(void)
 {
-	ClapTrap a("Mithras"); 	// This calls the constructor
-	ClapTrap b("Bas");
-	ClapTrap c(b);
-	a.attack("Bas");
-	b.takeDamage(0);
-	a.beRepaired(100);
+	ClapTrap Mithras("Mithras");
+	ClapTrap Bas("Bas");
+	ClapTrap NepBas(Bas);
+	Mithras.attack("Bas");
+	Bas.takeDamage(0);
+	Bas.beRepaired(100);
+	Bas.beRepaired(100);
 	return 0;
 }
